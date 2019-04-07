@@ -44,10 +44,12 @@ public class BouncingPanel extends JPanel implements ActionListener
 		if(this.x + this.width >= panelWidth || this.x <= 0)
 		{
 			this.xSpeed *= -1;
+			updateColor();
 		}
 		if(this.y + this.height >= panelHeight || this.y <= 0)
 		{
 			this.ySpeed *= -1;
+			updateColor();
 		}
 		
 		
@@ -64,6 +66,10 @@ public class BouncingPanel extends JPanel implements ActionListener
 		return randomColor;
 	}
 	
+	private void updateColor()
+	{
+
+	}
 	
 	public void paintComponent(Graphics g){
 		//g.setColor(generateRandomColor());
